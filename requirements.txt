@@ -1,3 +1,4 @@
 flask~=2.2.5
 wtforms~=2.3.3
 flask-wtf~=1.2.1
+flask-babel~=4.0.0

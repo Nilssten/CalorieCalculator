@@ -1,21 +1,45 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for, g
 from flask_wtf import FlaskForm
 from wtforms import FloatField, SubmitField
 from wtforms.validators import Optional
-from flask import jsonify
+from flask_babel import Babel, gettext
+from flask_session import Session
+
+# Define the supported languages
+LANGUAGES = ['en', 'lv']
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '!%9{!yor=dV2umkZ$WC@Mk|M5{:AdX'
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
+app.config['LANGUAGES'] = LANGUAGES
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
+
+babel = Babel(app)
+def get_locale():
+    print("User Language:", g.user_language) #Just to test if language switching works
+    return g.user_language
+
+
+@app.before_request
+def before_request():
+    g.user_language = session.get('lang') or request.args.get('lang') or request.accept_languages.best_match(LANGUAGES)
+
+def init_babel(app):
+    babel.init_app(app, locale_selector=get_locale)
+
+init_babel(app)
 
 def zero_if_empty(form, field):
     if field.data == '':
         field.data = 0
 
 class CalorieForm(FlaskForm):
-    protein = FloatField('Protein (g)', validators=[Optional(), zero_if_empty])
-    carbs = FloatField('Carbs (g)', validators=[Optional(), zero_if_empty])
-    fat = FloatField('Fat (g)', validators=[Optional(), zero_if_empty])
-    submit = SubmitField('Calculate Calories')
+    protein = FloatField(gettext('Protein (g)'), validators=[Optional(), zero_if_empty])
+    carbs = FloatField(gettext('Carbs (g)'), validators=[Optional(), zero_if_empty])
+    fat = FloatField(gettext('Fat (g)'), validators=[Optional(), zero_if_empty])
+    submit = SubmitField(gettext('Calculate Calories'))
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -58,54 +82,16 @@ def index():
                     recommendation = goal
 
         except ValueError:
-            result = "Invalid input. Please enter numeric values for protein, carbs, and fat."
+            result = gettext('Invalid input. Please enter numeric values for protein, carbs, and fat.')
 
-    return render_template('index.html', form=form, result=result, recommendation=recommendation)
+    return render_template('index.html', form=form, result=result, recommendation=recommendation, get_locale=get_locale)
 
+@app.route('/set_language/<lang>')
+def set_language(lang):
+    session['lang'] = lang
+    g.user_language = lang
+    return redirect(request.referrer or url_for('index'))
 
-@app.route('/recommendation', methods=['POST'])
-def get_macronutrient_recommendation():
-    # Get user input from the form
-    protein = float(request.form['protein']) if request.form['protein'] else 0
-    carbs = float(request.form['carbs']) if request.form['carbs'] else 0
-    fat = float(request.form['fat']) if request.form['fat'] else 0
-
-    # Calculate total macronutrients
-    total_macronutrients = protein + carbs + fat
-
-    # Calculate percentages
-    protein_percentage = (protein / total_macronutrients) * 100
-    carbs_percentage = (carbs / total_macronutrients) * 100
-    fat_percentage = (fat / total_macronutrients) * 100
-
-    # Provide recommendations based on fitness goals
-    recommendations = {
-        'weight_loss': {'protein': 30, 'carbs': 40, 'fat': 30},
-        'muscle_gain': {'protein': 40, 'carbs': 40, 'fat': 20},
-        'maintenance': {'protein': 25, 'carbs': 50, 'fat': 25}
-    }
-
-    return jsonify({
-        'user_input': {'protein': protein_percentage, 'carbs': carbs_percentage, 'fat': fat_percentage},
-        'recommendations': recommendations
-    })
-
-@app.route('/chart_data', methods=['POST'])
-def get_chart_data():
-    # Get user input from the form
-    protein = float(request.form['protein']) if request.form['protein'] else 0
-    carbs = float(request.form['carbs']) if request.form['carbs'] else 0
-    fat = float(request.form['fat']) if request.form['fat'] else 0
-
-    # Calculate percentages
-    protein_percentage = (protein / (protein + carbs + fat)) * 100
-    carbs_percentage = (carbs / (protein + carbs + fat)) * 100
-    fat_percentage = (fat / (protein + carbs + fat)) * 100
-
-    return jsonify({
-        'labels': ['Protein', 'Carbs', 'Fat'],
-        'data': [protein_percentage, carbs_percentage, fat_percentage]
-    })
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

@@ -1,0 +1,67 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-09 23:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: templates/index.html:6 templates/index.html:18
+msgid "Calorie Calculator"
+msgstr ""
+
+#: templates/index.html:14
+msgid "English"
+msgstr ""
+
+#: templates/index.html:15
+msgid "Latvian"
+msgstr ""
+
+#: templates/index.html:23
+msgid "Enter protein"
+msgstr ""
+
+#: templates/index.html:32
+msgid "Enter carbohydrates"
+msgstr ""
+
+#: templates/index.html:41
+msgid "Enter fat"
+msgstr ""
+
+#: templates/index.html:48
+msgid "Calculate Calories"
+msgstr ""
+
+#: templates/index.html:50
+msgid "Based on your input, we recommend a macronutrient distribution for:"
+msgstr ""
+
+#: templates/index.html:52
+msgid "Weight Loss"
+msgstr ""
+
+#: templates/index.html:54
+msgid "Muscle Gain"
+msgstr ""
+
+#: templates/index.html:56
+msgid "Maintenance"
+msgstr ""
+
+#: templates/index.html:63
+msgid "Calories:"
+msgstr ""
+

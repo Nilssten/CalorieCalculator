@@ -1,0 +1,43 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the Calorie Calclator project.
+# FIRST AUTHOR <nils22007488@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2\n"
+"Report-Msgid-Bugs-To: nils22007488@gmail.com\n"
+"POT-Creation-Date: 2024-03-09 22:46+0200\n"
+"PO-Revision-Date: 2024-03-09 22:51+0200\n"
+"Last-Translator: Nils Stenkevics <nils22007488@gmail.com>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+msgid "Calorie Calculator"
+msgstr "Calorie Calculator"
+
+msgid "Enter protein"
+msgstr "Enter protein"
+
+msgid "Enter carbohydrates"
+msgstr "Enter carbohydrates"
+
+msgid "Enter fat"
+msgstr "Enter fat"
+
+msgid "Calculate Calories"
+msgstr "Calculate Calories"
+
+msgid "Weight Loss"
+msgstr "Weight Loss"
+
+msgid "Muscle Gain"
+msgstr "Muscle Gain"
+
+msgid "Maintenance"
+msgstr "Maintenance"
