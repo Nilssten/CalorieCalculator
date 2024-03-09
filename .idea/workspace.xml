@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9b6e259-fd84-4e8a-96bd-b2dacff863c6" name="Changes" comment="Improved design, allows to leave field as empty and registers it as 0">
+    <list default="true" id="a9b6e259-fd84-4e8a-96bd-b2dacff863c6" name="Changes" comment="Design improvements.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Nilssten"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9db10ca1-412a-4a7b-97a0-32bacd6a1881" />
+        <option name="url" value="https://github.com/Nilssten/CalorieCalculator.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -85,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709928510884</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Design improvements.">
+      <option name="closed" value="true" />
+      <created>1710010869426</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710010869426</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +126,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Created Calorie Calculator with Flask and Dockerfile" />
     <MESSAGE value="Improved design, allows to leave field as empty and registers it as 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved design, allows to leave field as empty and registers it as 0" />
+    <MESSAGE value="Design improvements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Design improvements." />
   </component>
 </project>

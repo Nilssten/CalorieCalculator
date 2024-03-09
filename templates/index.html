@@ -58,7 +58,7 @@
             </div>
             <div class="form-group">
                 {{ form.carbs.label(class="form-control-label") }}
-                {{ form.carbs(class="form-control", placeholder="Enter carbs") }}
+                {{ form.carbs(class="form-control", placeholder="Enter carbohydrates") }}
                 {% if form.carbs.errors %}
                     <small class="form-text text-muted">
                         {{ ', '.join(form.carbs.errors) }}
@@ -75,6 +75,17 @@
                 {% endif %}
             </div>
             <button type="submit" class="btn btn-primary">Calculate Calories</button>
+            {% if recommendation %}
+                <p>Based on your input, we recommend a macronutrient distribution for:
+                    {% if recommendation == 'weight_loss' %}
+                        <a href="https://www.medicalnewstoday.com/articles/303409#10-tips" target="_blank">Weight Loss</a>
+                    {% elif recommendation == 'muscle_gain' %}
+                        <a href="https://www.medicalnewstoday.com/articles/319151#building-muscle-through-exercise" target="_blank">Muscle Gain</a>
+                    {% elif recommendation == 'maintenance' %}
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764193/" target="_blank">Maintenance</a>
+                    {% endif %}
+                </p>
+            {% endif %}
         </form>
 
         {% if result %}
