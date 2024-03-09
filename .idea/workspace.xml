@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9b6e259-fd84-4e8a-96bd-b2dacff863c6" name="Changes" comment="Design improvements.">
+    <list default="true" id="a9b6e259-fd84-4e8a-96bd-b2dacff863c6" name="Changes" comment="Added recommendations with hyperlinks based on selections.">
+      <change afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +65,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Faili\Python projects\CalorieCalculator\static\styles" />
       <recent name="D:\Faili\Python projects\CalorieCalculator" />
     </key>
   </component>
@@ -108,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710010869426</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added recommendations with hyperlinks based on selections.">
+      <option name="closed" value="true" />
+      <created>1710013584491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710013584491</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +136,7 @@
     <MESSAGE value="Created Calorie Calculator with Flask and Dockerfile" />
     <MESSAGE value="Improved design, allows to leave field as empty and registers it as 0" />
     <MESSAGE value="Design improvements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Design improvements." />
+    <MESSAGE value="Added recommendations with hyperlinks based on selections." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added recommendations with hyperlinks based on selections." />
   </component>
 </project>
