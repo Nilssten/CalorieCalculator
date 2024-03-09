@@ -1,0 +1,43 @@
+# Latvian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the Calorie Calculator project.
+# FIRST AUTHOR <nils22007488@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2\n"
+"Report-Msgid-Bugs-To: nils22007488@gmail.com\n"
+"POT-Creation-Date: 2024-03-09 22:46+0200\n"
+"PO-Revision-Date: 2024-03-09 22:51+0200\n"
+"Last-Translator: Nils Stenkevics <nils22007488@gmail.com>\n"
+"Language: lv\n"
+"Language-Team: lv <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+msgid "Calorie Calculator"
+msgstr "Kaloriju kalkulators"
+
+msgid "Enter protein"
+msgstr "Ievadiet olbaltumvielas"
+
+msgid "Enter carbohydrates"
+msgstr "Ievadiet ogļhidrātus"
+
+msgid "Enter fat"
+msgstr "Ievadiet taukus"
+
+msgid "Calculate Calories"
+msgstr "Aprēķināt kalorijas"
+
+msgid "Weight Loss"
+msgstr "Svara zudums"
+
+msgid "Muscle Gain"
+msgstr "Muskuļu masas pieaugums"
+
+msgid "Maintenance"
+msgstr "Uzturēšanās"

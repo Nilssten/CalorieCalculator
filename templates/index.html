@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ get_locale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie Calculator</title>
+    <title>{{ gettext('Calorie Calculator') }}</title>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 </head>
 <body>
+    <div id="language-selection">
+        <a href="{{ url_for('index', lang='en') }}" class="flag en" title="{{ gettext('English') }}"></a>
+        <a href="{{ url_for('index', lang='lv') }}" class="flag lv" title="{{ gettext('Latvian') }}"></a>
+    </div>
     <div class="container">
-        <h1 class="mb-4">Calorie Calculator</h1>
+        <h1 class="mb-4">{{ gettext('Calorie Calculator') }}</h1>
         <form method="post">
             {{ form.hidden_tag() }}
             <div class="form-group">
                 {{ form.protein.label(class="form-control-label") }}
-                {{ form.protein(class="form-control", placeholder="Enter protein") }}
+                {{ form.protein(class="form-control", placeholder=gettext("Enter protein")) }}
                 {% if form.protein.errors %}
                     <small class="form-text text-muted">
                         {{ ', '.join(form.protein.errors) }}
@@ -25,7 +29,7 @@
             </div>
             <div class="form-group">
                 {{ form.carbs.label(class="form-control-label") }}
-                {{ form.carbs(class="form-control", placeholder="Enter carbohydrates") }}
+                {{ form.carbs(class="form-control", placeholder=gettext("Enter carbohydrates")) }}
                 {% if form.carbs.errors %}
                     <small class="form-text text-muted">
                         {{ ', '.join(form.carbs.errors) }}
@@ -34,29 +38,29 @@
             </div>
             <div class="form-group">
                 {{ form.fat.label(class="form-control-label") }}
-                {{ form.fat(class="form-control", placeholder="Enter fat") }}
+                {{ form.fat(class="form-control", placeholder=gettext("Enter fat")) }}
                 {% if form.fat.errors %}
                     <small class="form-text text-muted">
                         {{ ', '.join(form.fat.errors) }}
                     </small>
                 {% endif %}
             </div>
-            <button type="submit" class="btn btn-primary">Calculate Calories</button>
+            <button type="submit" class="btn btn-primary">{{ gettext('Calculate Calories') }}</button>
             {% if recommendation %}
-                <p>Based on your input, we recommend a macronutrient distribution for:
+                <p>{{ gettext('Based on your input, we recommend a macronutrient distribution for:') }}
                     {% if recommendation == 'weight_loss' %}
-                        <a href="https://www.medicalnewstoday.com/articles/303409#10-tips" target="_blank">Weight Loss</a>
+                        <a href="https://www.medicalnewstoday.com/articles/303409#10-tips" target="_blank">{{ gettext('Weight Loss') }}</a>
                     {% elif recommendation == 'muscle_gain' %}
-                        <a href="https://www.medicalnewstoday.com/articles/319151#building-muscle-through-exercise" target="_blank">Muscle Gain</a>
+                        <a href="https://www.medicalnewstoday.com/articles/319151#building-muscle-through-exercise" target="_blank">{{ gettext('Muscle Gain') }}</a>
                     {% elif recommendation == 'maintenance' %}
-                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764193/" target="_blank">Maintenance</a>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764193/" target="_blank">{{ gettext('Maintenance') }}</a>
                     {% endif %}
                 </p>
             {% endif %}
         </form>
 
         {% if result %}
-            <h2 class="mt-4">Calories: {{ result }}</h2>
+            <h2 class="mt-4">{{ gettext('Calories:') }} {{ result }}</h2>
         {% endif %}
     </div>
 
