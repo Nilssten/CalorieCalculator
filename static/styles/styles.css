@@ -1,6 +1,10 @@
 body {
     background: linear-gradient(45deg, #2c3e50 50%, #c0392b 50%);
     color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -11,6 +15,7 @@ body {
     padding: 30px;
     margin-top: 50px;
     color: #333;
+    flex: 1;
 }
 
 .btn-primary {
@@ -54,3 +59,36 @@ input.form-control {
     border-radius: 5px; /* Optional: Add rounded corners */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Optional: Add a shadow for depth */
 }
+
+.footer {
+    background-color: transparent; /* No background color */
+    color: #333;
+    padding: 5px; /* Adjusted padding */
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+.fab {
+    font-size: 24px; /* Adjust size as needed */
+    color: #dc3545; /* Icon color */
+    margin: 0 10px; /* Space between icons */
+}
+
+.fab:hover {
+    color: #c0392b; /* Icon hover color */
+}
+

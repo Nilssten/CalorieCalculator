@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ gettext('Calorie Calculator') }}</title>
-    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div id="language-selection">
@@ -68,5 +67,16 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <footer class="footer">
+    <div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <p class="mb-0">@2024 made by Nils Stenkēvičs</p>
+            <a href="https://www.linkedin.com/in/nils-stenk%C4%93vi%C4%8Ds-1492b9290/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Nilssten" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</div>
+</footer>
 </body>
 </html>
