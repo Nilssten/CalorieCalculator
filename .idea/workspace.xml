@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9b6e259-fd84-4e8a-96bd-b2dacff863c6" name="Changes" comment="Put css code in separate file called styles.css">
+    <list default="true" id="a9b6e259-fd84-4e8a-96bd-b2dacff863c6" name="Changes" comment="Added footer.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_session/92b901b301043e0b057da70e29c5c9d4" beforeDir="false" afterPath="$PROJECT_DIR$/flask_session/92b901b301043e0b057da70e29c5c9d4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710013925312</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added footer.">
+      <option name="closed" value="true" />
+      <created>1710076420055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710076420055</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +154,7 @@
     <MESSAGE value="Design improvements." />
     <MESSAGE value="Added recommendations with hyperlinks based on selections." />
     <MESSAGE value="Put css code in separate file called styles.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put css code in separate file called styles.css" />
+    <MESSAGE value="Added footer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added footer." />
   </component>
 </project>
