@@ -30,6 +30,7 @@ docker run -d -p 5000:80 calorie-calculator
 docker build -t calorie-calculator .
 docker run -d -p 5000:80 calorie-calculator
 ```
+---
 ### 🛠️ Notes
 - 	If port 5000 is in use, replace it with another, e.g.:
 ```bash
